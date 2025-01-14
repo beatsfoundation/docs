@@ -22,14 +22,14 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Create",
     "url": "https://beatsfoundation.com"
   },
   "tabs": [
     {
       "name": "API Reference",
       "url": "api-reference",
-      "openapi": "https://beatsfoundation.com/swagger.json",
+      "openapi": "https://beatsfoundation.com/swagger.json"
     }
   ],
   "anchors": [
