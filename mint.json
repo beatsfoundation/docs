@@ -22,6 +22,16 @@
       "openapi": "https://www.beatsfoundation.com/swagger.json"
     }
   ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
+    }
+  ],
   "footerSocials": {
     "x": "https://x.com/0xbeatsai",
     "github": "https://github.com/beatsfoundation"
