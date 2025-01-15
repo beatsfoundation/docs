@@ -12,3 +12,34 @@ description: "Welcome to the Beats Foundation Creative AI Engine documentation"
 ## Getting Started with Beats Foundation
 
 Welcome to the Beats Foundation Creative AI Engine - your gateway to AI-powered music creation and audio manipulation. Our engine combines cutting-edge ai with intuitive controls to help you create, transform, and innovate with sound. You can create songs via the UI here: beatsfoundation.com or check out our API documentation to get started for programmatic and agentic ai use cases.
+
+## Quickstart
+
+### Getting an API key
+For every request you make, you'll need an API key. You can get this API key from beatsfoundation.com by signing up (via wallet connection) and then navigating to your profile page. You'll see an option to reveal your API key, which will give you the key you need for all function calls.
+
+### Making function calls
+We use stainless to create our SDK (currently we only support python). You can find the SDK here: https://github.com/beatsfoundation/beats-foundation-sdk. Here's a minimal example with the SDK: 
+
+```
+from beats_foundation import BeatsFoundation
+
+client = BeatsFoundation(bearer_token="YOUR_API_KEY")
+
+# get a song
+song = client.songs.retrieve(
+    "af0bb631-dbe0-4793-86ba-011c8fe93544"
+)
+
+# get list of songs 
+songs = client.songs.list()
+
+# create a song
+song = client.songs.create(
+    prompt="A song about a cat",
+    timeout=300
+)
+```
+
+### Warning about song creation
+Song creation can take a while and is not instantaneous. For this reason, we recommend setting your timeout to be 300 seconds for the API, otherwise you will get back failure messages due to function timeouts.
